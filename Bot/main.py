@@ -16,6 +16,12 @@
 import discord
 from discord.ext import commands
 import music
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("--token", help="token")
+args = parser.parse_args()
+if args.token:
+    print("token received")
 
 cogs = [music]
 client = commands.Bot(command_prefix='?', intents = discord.Intents.all())
